@@ -4,6 +4,7 @@ import ExpenseTracker from '@/components/ExpenseTracker';
 import IncomeTracker from '@/components/IncomeTracker';
 import BudgetOverview from '@/components/BudgetOverview';
 import TransactionList from '@/components/TransactionList';
+import InvestmentChatbot from '@/components/InvestmentChatbot';
 
 const Index = () => {
   return (
@@ -27,8 +28,11 @@ const Index = () => {
           <ExpenseTracker />
         </div>
 
-        {/* Transaction List */}
-        <TransactionList />
+        {/* AI Investment Chatbot and Transaction List */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          <InvestmentChatbot />
+          <TransactionList />
+        </div>
       </main>
     </div>
   );
