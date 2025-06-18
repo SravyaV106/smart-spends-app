@@ -1,12 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import Header from '@/components/Header';
+import ExpenseTracker from '@/components/ExpenseTracker';
+import IncomeTracker from '@/components/IncomeTracker';
+import BudgetOverview from '@/components/BudgetOverview';
+import TransactionList from '@/components/TransactionList';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-gray-50">
+      <Header />
+      
+      <main className="container mx-auto px-4 py-8">
+        <div className="mb-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">Financial Dashboard</h2>
+          <p className="text-gray-600">Track your income, expenses, and budget all in one place.</p>
+        </div>
+
+        {/* Budget Overview */}
+        <div className="mb-8">
+          <BudgetOverview />
+        </div>
+
+        {/* Income and Expense Trackers */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+          <IncomeTracker />
+          <ExpenseTracker />
+        </div>
+
+        {/* Transaction List */}
+        <TransactionList />
+      </main>
     </div>
   );
 };
