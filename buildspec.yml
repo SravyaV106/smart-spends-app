@@ -27,7 +27,7 @@ phases:
 
 artifacts:
   files:
-    - vite-react-app.zip
+    - '**/*'
   base-directory: dist
   discard-paths: no
 
